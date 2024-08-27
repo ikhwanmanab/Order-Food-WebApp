@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu Order</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Today's Special</h1>
+    </header>
+
+    <div class="container">
+        <aside>
+            <ul class="categories">
+                <li onclick="filterMenu('breakfast')">Breakfast <span>(6)</span></li>
+                <li onclick="filterMenu('lunch')">Lunch <span>(4)</span></li>
+                <li onclick="filterMenu('supper')">Supper <span>(5)</span></li>
+                <li onclick="filterMenu('dinner')">Dinner <span>(7)</span></li>
+            </ul>
+        </aside>
+
+        <main>
+            <section id="menu">
+                <h2 id="menu-title">Breakfast</h2>
+                <p id="menu-description">Start your day with our Delicious Breakfast menu.</p>
+                <!-- Breakfast Menu Items -->
+                <div class="menu-item breakfast">
+                    <div>
+                        <i class="fas fa-pizza-slice fa-3x"></i>
+                        <h3>Pizza</h3>
+                        <p>$10.00</p>
+                    </div>
+                    <button onclick="addToOrder('Pizza', 10)">ADD +</button>
+                </div>
+                <div class="menu-item breakfast">
+                    <div>
+                        <i class="fas fa-hamburger fa-3x"></i>
+                        <h3>Burger</h3>
+                        <p>$7.00</p>
+                    </div>
+                    <button onclick="addToOrder('Burger', 7)">ADD +</button>
+                </div>
+                <div class="menu-item breakfast">
+                    <div>
+                        <i class="fas fa-bowl-spoon fa-3x"></i>
+                        <h3>Pasta</h3>
+                        <p>$8.00</p>
+                    </div>
+                    <button onclick="addToOrder('Pasta', 8)">ADD +</button>
+                </div>
+                <div class="menu-item breakfast">
+                    <div>
+                        <i class="fas fa-seedling fa-3x"></i>
+                        <h3>Salad</h3>
+                        <p>$5.00</p>
+                    </div>
+                    <button onclick="addToOrder('Salad', 5)">ADD +</button>
+                </div>
+                <div class="menu-item breakfast">
+                    <div>
+                        <i class="fas fa-egg fa-3x"></i>
+                        <h3>Omelette</h3>
+                        <p>$6.00</p>
+                    </div>
+                    <button onclick="addToOrder('Omelette', 6)">ADD +</button>
+                </div>
+                <div class="menu-item breakfast">
+                    <div>
+                        <i class="fas fa-bread-slice fa-3x"></i>
+                        <h3>Pancakes</h3>
+                        <p>$5.00</p>
+                    </div>
+                    <button onclick="addToOrder('Pancakes', 5)">ADD +</button>
+                </div>
+                
+                <!-- Lunch Menu Items -->
+                <div class="menu-item lunch" style="display: none;">
+                    <div>
+                        <i class="fas fa-drumstick-bite fa-3x"></i>
+                        <h3>Steak</h3>
+                        <p>$15.00</p>
+                    </div>
+                    <button onclick="addToOrder('Steak', 15)">ADD +</button>
+                </div>
+                <div class="menu-item lunch" style="display: none;">
+                    <div>
+                        <i class="fas fa-fish fa-3x"></i>
+                        <h3>Grilled Salmon</h3>
+                        <p>$18.00</p>
+                    </div>
+                    <button onclick="addToOrder('Grilled Salmon', 18)">ADD +</button>
+                </div>
+                <div class="menu-item lunch" style="display: none;">
+                    <div>
+                        <i class="fas fa-carrot fa-3x"></i>
+                        <h3>Vegetable Stir-fry</h3>
+                        <p>$10.00</p>
+                    </div>
+                    <button onclick="addToOrder('Vegetable Stir-fry', 10)">ADD +</button>
+                </div>
+                <div class="menu-item lunch" style="display: none;">
+                    <div>
+                        <i class="fas fa-bacon fa-3x"></i>
+                        <h3>Bacon Cheeseburger</h3>
+                        <p>$12.00</p>
+                    </div>
+                    <button onclick="addToOrder('Bacon Cheeseburger', 12)">ADD +</button>
+                </div>
+                
+                <!-- Supper Menu Items -->
+                <div class="menu-item supper" style="display: none;">
+                    <div>
+                        <i class="fas fa-soup fa-3x"></i>
+                        <h3>Tomato Soup</h3>
+                        <p>$6.00</p>
+                    </div>
+                    <button onclick="addToOrder('Tomato Soup', 6)">ADD +</button>
+                </div>
+                <div class="menu-item supper" style="display: none;">
+                    <div>
+                        <i class="fas fa-salad fa-3x"></i>
+                        <h3>Caesar Salad</h3>
+                        <p>$8.00</p>
+                    </div>
+                    <button onclick="addToOrder('Caesar Salad', 8)">ADD +</button>
+                </div>
+                <div class="menu-item supper" style="display: none;">
+                    <div>
+                        <i class="fas fa-sandwich fa-3x"></i>
+                        <h3>Club Sandwich</h3>
+                        <p>$7.00</p>
+                    </div>
+                    <button onclick="addToOrder('Club Sandwich', 7)">ADD +</button>
+                </div>
+                <div class="menu-item supper" style="display: none;">
+                    <div>
+                        <i class="fas fa-pizza-slice fa-3x"></i>
+                        <h3>Margarita Pizza</h3>
+                        <p>$9.00</p>
+                    </div>
+                    <button onclick="addToOrder('Margarita Pizza', 9)">ADD +</button>
+                </div>
+                <div class="menu-item supper" style="display: none;">
+                    <div>
+                        <i class="fas fa-cookie fa-3x"></i>
+                        <h3>Chocolate Chip Cookies</h3>
+                        <p>$4.00</p>
+                    </div>
+                    <button onclick="addToOrder('Chocolate Chip Cookies', 4)">ADD +</button>
+                </div>
+                
+                <!-- Dinner Menu Items -->
+                <div class="menu-item dinner" style="display: none;">
+                    <div>
+                        <i class="fas fa-chicken fa-3x"></i>
+                        <h3>Roast Chicken</h3>
+                        <p>$14.00</p>
+                    </div>
+                    <button onclick="addToOrder('Roast Chicken', 14)">ADD +</button>
+                </div>
+                <div class="menu-item dinner" style="display: none;">
+                    <div>
+                        <i class="fas fa-fish fa-3x"></i>
+                        <h3>Fish and Chips</h3>
+                        <p>$13.00</p>
+                    </div>
+                    <button onclick="addToOrder('Fish and Chips', 13)">ADD +</button>
+                </div>
+                <div class="menu-item dinner" style="display: none;">
+                    <div>
+                        <i class="fas fa-spaghetti fa-3x"></i>
+                        <h3>Spaghetti Bolognese</h3>
+                        <p>$12.00</p>
+                    </div>
+                    <button onclick="addToOrder('Spaghetti Bolognese', 12)">ADD +</button>
+                </div>
+                <div class="menu-item dinner" style="display: none;">
+                    <div>
+                        <i class="fas fa-shrimp fa-3x"></i>
+                        <h3>Shrimp Tacos</h3>
+                        <p>$11.00</p>
+                    </div>
+                    <button onclick="addToOrder('Shrimp Tacos', 11)">ADD +</button>
+                </div>
+                <div class="menu-item dinner" style="display: none;">
+                    <div>
+                        <i class="fas fa-pizza-slice fa-3x"></i>
+                        <h3>BBQ Chicken Pizza</h3>
+                        <p>$13.00</p>
+                    </div>
+                    <button onclick="addToOrder('BBQ Chicken Pizza', 13)">ADD +</button>
+                </div>
+                <div class="menu-item dinner" style="display: none;">
+                    <div>
+                        <i class="fas fa-cheeseburger fa-3x"></i>
+                        <h3>Double Cheeseburger</h3>
+                        <p>$14.00</p>
+                    </div>
+                    <button onclick="addToOrder('Double Cheeseburger', 14)">ADD +</button>
+                </div>
+                <div class="menu-item dinner" style="display: none;">
+                    <div>
+                        <i class="fas fa-ice-cream fa-3x"></i>
+                        <h3>Vanilla Ice Cream</h3>
+                        <p>$5.00</p>
+                    </div>
+                    <button onclick="addToOrder('Vanilla Ice Cream', 5)">ADD +</button>
+                </div>
+            </section>
+        </main>
+
+        <aside id="order-summary">
+            <div class="order-header" onclick="toggleOrderSummary()">
+                <h3>Your Orders <span id="order-count">(0)</span></h3>
+            </div>
+            <div id="order-details">
+                <ul id="order-list"></ul>
+                <p id="total">Total: $0.00</p>
+                <button onclick="submitOrder()">CONTINUE</button>
+            </div>
+        </aside>
+
+        <button id="toggle-order-summary-btn" onclick="toggleOrderSummary()">Toggle Orders</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Our Restaurant</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
